@@ -1,3 +1,17 @@
+# Insta-clone
+
+A responsive social media web app inspired by Instagram, built with React and Tailwind CSS.
+Users can browse posts, comment, and explore a modern UI with smooth interactions.
+
+🚀 Features
+
+- 🖼️ Upload and display posts with captions
+- ❤️ Like and 💬 comment system (Like is TODO)
+- 🔍 Search posts by caption/keyword
+  -👤 Profile page
+- 🌙 Dark mode support
+- 📱 Fully responsive
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

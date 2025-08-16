@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "../assets/logo.jpg";
-import userIcon from "../assets/user.png";
-import { Link } from "react-router-dom";
+import React from 'react';
+import logo from '../assets/logo.jpg';
+import userIcon from '../assets/user.png';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,29 +11,48 @@ const Header = () => {
       </div>
 
       <nav className="flex gap-8 self-center">
-        <Link to="/" className="text-black font-medium hover:underline">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? 'text-indigo-500 font-bold' : 'text-gray-600'
+          }
+        >
           Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/Notification"
-          className="text-black font-medium hover:underline"
+          className={({ isActive }) =>
+            isActive ? 'text-indigo-500 font-bold' : 'text-gray-600'
+          }
         >
           Notifications
-        </Link>
-        <Link to="/Search" className="text-black font-medium hover:underline">
+        </NavLink>
+        <NavLink
+          to="/Search"
+          className={({ isActive }) =>
+            isActive ? 'text-indigo-500 font-bold' : 'text-gray-600'
+          }
+        >
           Search
-        </Link>
-        <Link to="/About" className="text-black font-medium hover:underline">
+        </NavLink>
+        <NavLink
+          to="/About"
+          className={({ isActive }) =>
+            isActive ? 'text-indigo-500 font-bold' : 'text-gray-600'
+          }
+        >
           About
-        </Link>
+        </NavLink>
       </nav>
 
       <div>
-        <img
-          src={userIcon}
-          alt="User Icon"
-          className="w-14 h-14 border-2 border-black rounded-full p-1"
-        />
+        <Link to="/Profile" className="flex items-center">
+          <img
+            src={userIcon}
+            alt="User Icon"
+            className="w-14 h-14 border-2 border-black rounded-full p-1"
+          />
+        </Link>
       </div>
     </header>
   );
